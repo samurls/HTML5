@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Example</title>
+		<style>
+			table{
+				border-collapse: collapse;
+				border:thin solid black;
+			}
+			th,td{
+				padding:4px;
+			}
+		</style>
+	</head>
+	<body id="main">
+		<!--<script>
+			var features = ['Core','HTML', 'CSS', 'Selectors-API'];
+			var levels = ['1.0', '2.0','3.0'];
+			
+			document.writeln('<pre>');
+			for (var i = 0; i <features.length; i++){
+				document.writeln('Checking for feature:' + features[i]);
+				for (var j =0; j < levels.length; j++){
+					document.write(features[i]+' Level '+levels[j]+': ');
+					document.writeln(document.implementation.hasFeature(features[i],levels[j]));
+				}
+			}
+			document.write('</pre>')
+		</script>-->
+		
+		<!--<pre id="results"></pre>
+		<img src="accept.png" alt="lemon" id="lemon" />
+		<p>
+			There are lots of different kinds of fruit - there are over 500 variteties
+			of banana alone. By the time we add the countless types of apples, oranges,
+			and other well-known fruit, we are faced with thousands of choices.
+		</p>
+		<img src="apple.png" alt="apple" id="apple" name="apple" class="fruits"/>
+		<p>
+			One of the most interesting aspects of fruit is the variety available in
+			each country. I live near <span>London</span>, in an area which is known for its 
+			apples.
+		</p>
+		<img src="banana-small.png" alt="small banana" id="banana" class='fruits'/>
+		<script>
+			var resultsElement = document.getElementById('results');
+			var pElems = document.getElementsByTagName('p');
+			resultsElement.innerHTML += 'There are '+pElems.length + ' p elements\n';
+			var fruitsElems = document.getElementsByClassName('fruits');
+			resultsElement.innerHTML += 'There are '+ fruitsElems.length
+			+ ' elements in the fruits class\n';
+			var nameElems = document.getElementsByName('apple');
+			resultsElement.innerHTML += 'There are '+ nameElems.length
+			+' elements with the name "apple"\n';
+			csss = document.querySelectorAll('img#banana,img#apple');
+			resultsElement.innerHTML += 'The selector matched '+csss.length +' elements\n'
+			
+		</script>-->
+		<!--<pre id="results"></pre>
+		<p id="tblock">
+			There are lots of different kinds of fruit = there are over 500 varieties 
+			of <span id="banana">banana</span> alone. By the time we add the countless 
+			types of <span id="apple">apples</span>,
+			<span='orange'>oranges</span='orange'>, and other well-known fruit, we are
+			faced with thousands of choices.
+		</p>
+		<script>
+			var resultsElement = document.getElementById('results');
+			var elems = document.getElementById('tblock').getElementsByTagName('span');
+			resultsElement.innerHTML += 'There are '+elems.length + ' span elements\n';
+			var elems2 = document.getElementById('tblock').querySelectorAll('span');
+			resultsElement.innerHTML += 'There are '+elems2.length +' span elements (Mix)\n';
+			var selElems = document.querySelectorAll('#tblock>span');
+			resultsElement.innerHTML +='There are '+selElems.length+' span elements (CSS)\n';
+			
+		</script>-->
+		
+		<!--<pre id="results"></pre>
+		<p id="tblock">
+			There are lots of different konds of fruit - there are over 500 varieties 
+			of <span id="banana">banana</span> alone. By the time we add the countless 
+			types of <span id="apple">apples</span>,
+			<span='orange'>oranges</span='orange'>, and other well-known fruit, we are 
+			faced with thousands of choices.
+		</p>
+		<img src="apple.png" alt="apple" id="apple" class="fruits images" />
+		<img src="banana-small.png" alt="small banana" id="banana" />
+		<p>
+			One of the most interesting aspects of fruit is the variety available in 
+			each country. I live near London, in an area which is known for its apples.
+		</p>
+		<p>
+			<button id="parent">Parent</button>
+			<button id="child">First Child</button>
+			<button id="prev">Prev Sibling</button>
+			<button id="next">Next Sibling</button>
+		</p>
+		<script>
+			var resultsElem = document.getElementById('results');
+			var element = document.body;
+			var buttons = document.getElementsByTagName('button');
+			for (var i = 0; i < buttons.length; i++){
+				buttons[i].onclick = handleButtonClick;
+			}
+			processNewElement(element);
+			function handleButtonClick(e){
+				if (element.style){
+					element.style.backgroundColor = 'white';
+				}
+				if (e.target.id == 'parent' && element != document.body){
+					element = element.parentNode;
+				}else if (e.target.id == 'child' && element.hasChildNodes()){
+					element = element.firstChild;
+				}else if (e.target.id == 'prev' && element.previousSibling){
+					element = element.previousSibling;
+				}else if (e.target.id == 'next' && element.nextSibling){
+					element = element.nextSibling;
+				}
+				processNewElement(element);
+				if (element.style){
+					element.style.backgroundColor = 'lightgrey';
+				}
+			}
+			function processNewElement(elem){
+				resultsElem.innerHTML = 'Element type:'+elem + '\n';
+				resultsElem.innerHTML += 'Element id:' + elem.id +'\n';
+				resultsElem.innerHTML += 'Has child nodes:'+=elem.hasChildNodes()+'\n';
+				if (elem.previousSibling	){
+					resultsElem.innerHTML += ('Prev sibling is: '+elem.previousSibling+'\n');
+				}else{
+					rusultsElem.innerHTML +='No prev sibling\n';
+				}
+				if (elem.nextSibling){
+					resultsElem.innerHTML +='Next sibling is:'+elem.nextSibling +'\n';
+				}else{
+					resultsElem.innerHTML +='No next sibling\n';
+				}
+			}
+		</script>-->
+		
+		<!--<table>
+			<tr>
+				<th>outerWidth</th>
+				<td id="owidth"></td>
+			</tr>
+			<tr>
+				<th>outerHeight</th>
+				<td id="oheight"></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			document.getElementById('owidth').innerHTML = window.outerWidth;
+			document.getElementById('oheight').innerHTML = document.defaultView.outerHeight;
+		</script>-->
+		
+<!--		
+		<table border="1">
+		<tr>
+			<th>outerWidth:</th>
+			<td id="ow"></td>
+			<th>outerHeight:</th>
+			<td id="oh"></td>
+		</tr>
+		<tr>
+			<th>innerWidth:</th>
+			<td id="iw"></td>
+			<th>innerHeight:</th>
+			<td id="ih"></td>
+		</tr>
+		<tr>
+			<th>screen.width:</th>
+			<td id="sw"></td>
+			<th>screen.height:</th>
+			<td id="sh"></td>
+		</tr>
+		</table>
+		
+		<script>
+			document.getElementById('ow').innerHTML = window.outerWidth;
+			document.getElementById('oh').innerHTML = window.outerHeight
+			document.getElementById('iw').innerHTML = window.innerWidth;
+			document.getElementById('ih').innerHTML = window.innerHeight;
+			document.getElementById('sw').innerHTML = window.screen.width;
+			document.getElementById('sh').innerHTML = window.screen.height;
+		</script>-->
+		
+		<p>
+			<button id="scroll">Scroll</button>
+			<button id="print">Print</button>
+			<button id="close">Close</button>
+		</p>
+		<p>
+			There are lots of different kingds of fruit - there are over 500 varieties 
+			of banana alone. By the time we add the countless types of apples, oranges 
+			and other well-known fruit, we are faced with thousands of choices.
+			<img src="apple.png" alt="apple" />
+			One of the most interesting aspects of fruit is the variety available in 
+			each country. I live near London, in an area which is known for 
+			its apples.
+			<img src="banana-small.png" alt="banana" />
+			When traveling in Asia, I was struck by how many different 
+			kinds of banana were available = many of which had unique flavors and  
+			which were only available within a small region.
+			And, of course, there are fruits which are truly unique - I am put in mand 
+			of the durian, which is widely consumed in SE Asia and is known  as the 
+			'king of fruits.' The durian is largely unkinown in Europe and the USA - if 
+			it is known at all, it is for the overwhelming smell, which is copared 
+			to a combination of almonds, rotten onions and gym socks.
+		</p>
+		<script>
+			var buttons  = document. getElmentsByTagNameZ('button');
+			for (var i = 0; i < buttons.length; i++){
+				buttons[i].onclick = handleButtonPresskn;
+			}
+			function handleButtonPress(e){
+				if(e.target.id)=='print'){
+					window.print();
+				}else if (e.target.id== 'close';{
+					window,.close()
+				}else{
+					window.scrollTo(0,400);
+				}
+			}
+		</script>
+	</body>
+</html>

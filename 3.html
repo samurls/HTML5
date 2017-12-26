@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="http://www.baidu.com/">
+    <title>Document</title>
+    <style media="screen AND (max-width:500px)" type="text/css">
+        a{
+            background-color: grey;
+            color: white;
+            padding: 0.5em;
+        }
+    </style>
+    <style media="screen AND (min-width:500px)">
+        a{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+    <!-- <script src="1.js"></script> -->
+    <style>
+        .fruit{
+            padding: 1px;
+            border: 1px solid yellow;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        I like <code id="applecode">apples</code> and oranges.
+    </p>
+    <a href="http://apress.com">Visit Apress.com</a>
+    <a href="page2.html">Page 2</a>
+    <br>
+    I like <a href="http://en.wikipedia.org/wiki/Apples">apples</a> and <a href="http://en.wikipedia.org/wiki/Orange_(friut)">oranges</a>.
+    You can see other fruits I like <a href="#fruits">here</a>.
+
+    <p id="fruits">
+        I also like bananas, mangoes, cherries, <em>apricots</em>, plums, <sub>peaches</sub> and <sup>grapes</sup>.
+    </p>
+    <br>
+    <br>
+    <br>
+    <p>
+        <code>
+            var fruits = ['apples', 'oranges', 'mangoes', 'cherries'];
+            <br>
+            document.writeln('I like ' + fruits.length + ' fruits');
+        </code>
+    </p>
+    <p>The variable in this example is <var>fruits</var></p>
+    <p>The output from the code is: <samp>I like 4 fruits</samp></p>
+    <p>When prompted for my favorite fruit, I typed: <kbd title="又红又大">cherries</kbd></p>
+    <br>
+    <br>
+    <br>
+    I like apples and oranges.
+    The <abbr title="Florida Department of Citrus">FDOC</abbr> regulates the Florida citrus industry.
+
+    <p>
+        <q cite='http://en.wikipedia.org/wiki/Apple'>The <dfn title="apples">apple</dfn> is the pomaceous fruit of the apple tree, species Malus domestica in the rose family.</q>
+        My favorite book on fruit is <cite>Fruit: Edible, Inedible, Incredible</cite> by Stuppy & Kesseler
+    </p>
+
+    <p>
+        <bdo dir="ltr">今天天气<ins>很好！</ins><del>很差！</del></bdo>
+        <bdo dir="rtl">今天天气很好！</bdo>
+    </p>
+
+    <p>
+        Joe: 6 apples
+    </p>
+    I like <span class="fruit">apples</span> <mark>and</mark> <span class="fruit">oranges</span>
+    <br>
+    <br>
+    <br>
+    I bought it at <time datetime="15:00">3 o'clock</time>
+</body>
+</html>

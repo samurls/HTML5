@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网</title>
+    <link rel="stylesheet" href="1.css">
+    <script type="text/javascript" src="1.js"></script>
+</head>
+<body>
+    <!-- <div id="toppart">
+        <div id="lpart">功能区</div>
+        <div id="cpart">功能配置区</div>
+        <div id="rpart">快捷栏</div>
+        <div id="bpart">显示区</div>
+
+    </div> -->
+
+    <table width="auto">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Type</th>
+                <th>Color</th>
+                <th colspan="2">Size & Vote</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Rank</th>
+                <th>Type</th>
+                <th>Color</th>
+                <th colspan="2">Size & Vote</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>1st Favor:</th>
+                <td>Apples</td>
+                <td>Green</td>
+                <td>Medium</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <th>2nd Favor</th>
+                <td>Oranges</td>
+                <td>Orange</td>
+                <td>Large</td>
+                <td>340</td>
+            </tr>
+            <tr>
+                <th>3th Favor</th>
+                <td rowspan="2">Pomegranate</td>
+                <td colspan="2" rowspan="2">A kind of greeny-red,Varies from medium to large</td>
+                <td>83</td>
+            </tr>
+            <tr>
+                <th rowspan="2">4th Favor</th>
+                <!-- <td>Pomegranate</td> -->
+                <td>103</td>
+            </tr>
+            <tr>
+                <td>Varies </td>
+                <td colspan="2">lightgreen and a bit of red</td>
+                <td>70</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <table width="auto">
+        <tbody>
+            <tr>
+                <th id="rank">Rank</th>
+                <th id="name">Name</th>
+                <th id="color">Color</th>
+                <th id="sizeAndVote" colspan="2">Size & Vote</th>
+            </tr>
+            <tr>
+                <th>1st Favor</th>
+                <td>Apple</td>
+                <td>green</td>
+                <td>middium</td>
+                <td>81</td>
+            </tr>
+            <tr>
+                <th>2nd Favor</th>
+                <td>Orange</td>
+                <td>orange</td>
+                <td>middium</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <th>3th Favor</th>
+                <td>peach</td>
+                <td>Yellow</td>
+                <td>big</td>
+                <td>38</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>
+    		 "我想试下系未真系边改边看模式？"
+    </p>
+
+    <script>
+        var s = 'kdkdk你还是人吗？-f我';
+        function ab(s){
+            var j = 0;
+            i = s.length;
+            while(i--){
+                    j+=((s.charCodeAt(i)<=255)?1:2);
+
+            }
+            return j;
+        }
+        console.log(ab(s));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件处理</title>
+    <style type='text/css'>
+        p{
+            background: gray;
+            color:white;
+            padding:10px;
+            margin:5px;
+            border:thin solid black;
+        }
+        span{
+            background: white;
+            color:black;
+            padding:2px;
+            cursor:default;
+        }
+    </style>
+</head>
+<body>
+    <p id="block1">
+        There are lots of different kinds of fruit - there are over 500 varieties of <span id="banana">banana</span> alone. By the time we add the ountless types of apples, oranges, and other well-kinown fruit, we are faced with thousands of coices.
+    </p>
+    <p id="block2">
+        One of the most interesting aspects of fruit is the variety available in each country. I live near London, in an area which is known for its apples.
+    </p>
+    <script type="text/javascript">
+        var banana = document.getElementById('banana');
+        var textblock = document.getElementById('block1');
+
+        banana.addEventListener('mouseover',moE);
+        banana.addEventListener('mouseout',moE);
+        textblock.addEventListener('mouseover',moDeE,true);
+        textblock.addEventListener('mouseout',moDeE,true);
+        textblock.addEventListener('mouseover',moBuE,false);
+        textblock.addEventListener('mouseout',moBuE,false);
+
+        function moBuE(e){
+            if(e.type =='mouseover' && e.eventPhase==Event.BUBBLING_PHASE){
+                e.target.style.textTransform = 'uppercase';
+            }else if(e.type == 'mouseout' && e.eventPhase==Event.BUBBLING_PHASE){
+                e.target.textTransform='none';
+            }
+        }
+
+        function moDeE(e){
+            if(e.type=='mouseover' && e.eventPhase==Event.CAPTURING_PHASE){
+                e.target.style.border = 'thick solid red';
+                e.currentTarget.style.border = 'thick double black';
+            }else if(e.type=='mouseout' && e.eventPhase==Event.CAPTURING_PHASE){
+                e.target.style.removeProperty('border');
+                e.currentTarget.style.removeProperty('border');
+            }
+            // e.stopPropagation();
+        }
+
+        function moE(e){
+            if(e.type=='mouseover'){
+                e.target.style.background='black';
+                e.target.style.color='white';
+            }else{
+                e.target.style.removeProperty('color');
+                e.target.style.removeProperty('background');
+            }
+        }
+    </script>
+</body>
+</html>

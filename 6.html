@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#table{
+				display:table;
+				border-collapse:separate;
+				border-spacing:1px;
+			}
+			div.row{
+				display:table-row;
+				background-color: lightgray;
+			}
+			p{
+				display:table-cell;
+				border:medium double #dbdbdb;
+				padding:15px;
+				margin:15px;
+			}
+			img{
+				float:left;
+			}
+			/*p{
+				padding:5px;
+				border:medium double black;
+				background-color: lightgray;
+				font-family:sans-serif;
+				color:rgba(255,255,255,0.7)
+			}*/
+			#banana{
+				font-size:x-large;
+				border:thin solid white;
+				background-color: green;
+				color: white;
+				opacity:0.4;
+				padding: 4px;
+				-moz-transform: rotate(-45deg) scaleX(1.2)
+			}
+			p:hover{
+				color:red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="table">
+			<div class="row">
+				<p>
+					There are lots of different kinds of fruit - there are over 500
+					varieties of banana alone. By the time we add the countless types of 
+					apples, oranges, and other well-known fruit, we are faced with 
+					thousands of choices.
+				</p>
+				<p>
+					One of the most interesting aspects of fruit is the variety available 
+					in each country. I live near Lonedon, in an are which is known for 
+					its apples.
+				</p>
+				<p>
+					When travelling in Asia, I was struck by how many different kinds of 
+					banana were availabel - many of which had unique flavours and which 
+					were only avaiable within a small region.
+				</p>
+			</div>
+			<div class="row">
+				<p>
+					This is an <span id="apple">apple</span>. <img src="apple.png" alt="apple" />
+				</p>
+				<p>
+					This is a <span id="banana">banana</span>. <img src="banana-small.png" alt="banana" />
+				</p>
+				<p>
+					No picture here
+				</p>
+			</div>
+		</div>
+		<!--<p><button>Running</button><button>Paused</button></p>-->
+</html>

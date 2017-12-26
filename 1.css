@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#toppart{
+    background-color: rgba(240,148,148,0.1);
+    position:absolute;
+    border:1px black solid;
+    width: 300px;
+    height: 520px;
+    margin-left: 10px;
+}
+
+/*toppart 下的公共配置*/
+#toppart div{
+    position:absolute;
+    border:1px black dashed;
+    margin-bottom: 10px;
+}
+#lpart{
+    border-color: green;
+    width: 80px;
+    height: 200px;
+    margin-right: 10px;
+
+}
+
+#cpart{
+    border-color: red;
+    width: 200px;
+    height: 200px;
+    left: 90px;
+    margin-right: 10px;
+}
+
+#rpart{
+    border-color: blue;
+    left: 300px ;
+    width: 40px;
+    height: 120px;
+}
+
+#bpart{
+    border-color: purple;
+    width: 290px;
+    height: 300px;
+    top: 210px;
+}
+td{
+    border: thin solid lightyellow;
+}
+tr th{
+    /*border:1px black solid;*/
+    text-align: left;
+    background-color: grey;
+    color: white;
+}
+
+tr th:only-of-type{
+    text-align: right;
+    background-color: lightgrey;
+    color: grey;
+}
+
+thead [colspan]{
+    text-align: center;
+}
