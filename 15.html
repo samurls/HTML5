@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用键盘焦点事件</title>
+    <style>
+        p{
+            background: gray;
+            color:white;
+            padding:10px;
+            margin:5px;
+            border:thin solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p><label for="fave">Fruit:
+        <input type="text" autofocus id="fave" name="fave"></label></p>
+        <p><label for="name">Name:
+        <input type="text" id="name" name="name"></label></p>
+        <button type="submit">Submit Vote</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <span id="message"></span>
+
+    <script>
+        var inputElems = document.getElementsByTagName('input');
+        for(var i =0; i<inputElems.length;i++){
+            inputElems[i].onfocus = handleFocusEvent;
+            inputElems[i].onblur = handleFocusEvent;
+            inputElems[i].onkeyup = handleKeyboardEvent;
+        }
+
+        function handleFocusEvent(e) {
+            if(e.type == 'focus'){
+                e.target.style.background = 'lightgray';
+                e.target.style.border = 'thick double red';
+            }else{
+                e.target.style.removeProperty('background');
+                e.target.style.removeProperty('border');
+            }
+        }
+
+        function handleKeyboardEvent(e) {
+            document.getElementById('message').innerHTML = 'Key pressed: '+e.keyCode + ' Char: '+String.fromCharCode(e.keyCode);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+    <style type="text/css">
+        a{
+            background: gray;
+            color:white;
+            padding:10px;
+            border:thin solid black;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="http://apress.com">Vist Apress</a><a href="http://w3c.org">Visit W3C</a></p>
+    <script>
+        function handleClick(e) {
+            if(!confirm("Do you want to navigate to "+e.target.href+" ?")){
+                e.preventDefaulte();
+            }
+        }
+
+        var elems = document.querySelector("a");
+        for (var i=0;i<elems.length; i++){
+            elems[i].addEventListener("click",handleClick,false);
+        }
+    </script>
+</body>
+</html>
